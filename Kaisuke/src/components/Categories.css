@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+.categories-page {
+  --categories-red: #db3339;
+  --categories-text: #333;
+  min-height: 100vh;
+  background: #fff;
+  color: var(--categories-text);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.categories-page,
+.categories-page * {
+  box-sizing: border-box;
+}
+
+.categories-main {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 38px 0 64px;
+}
+
+.categories-intro {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.categories-eyebrow {
+  margin: 0 0 8px;
+  color: var(--categories-red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.categories-intro h1 {
+  margin: 0;
+  color: #222;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.categories-subtitle {
+  margin: 12px 0 0;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+.category-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(35, 20, 20, 0.09);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 24px rgba(35, 20, 20, 0.14);
+}
+
+.category-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f5e9e7;
+}
+
+.category-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.category-card:hover .category-card-image img {
+  transform: scale(1.04);
+}
+
+.category-card-image--placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 50% 120%, transparent 0 30%, rgba(255,255,255,.5) 31% 32%, transparent 33% 48%, rgba(255,255,255,.35) 49% 50%, transparent 51%),
+    linear-gradient(135deg, #f8e9df, #f3d9d4);
+  color: #6f4542;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+}
+
+.category-card-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 17px 18px 18px;
+}
+
+.category-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+.category-japanese {
+  color: #555;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.category-count {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: 1px solid rgba(219, 51, 57, 0.45);
+  border-radius: 12px;
+  color: var(--categories-red);
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.category-card-content h2 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.category-card-content p {
+  margin: 0 0 18px;
+  color: #555;
+  font-size: 0.78rem;
+  line-height: 1.65;
+}
+
+.category-recipes {
+  margin-top: auto;
+}
+
+.category-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--categories-red);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.category-explore::-webkit-details-marker {
+  display: none;
+}
+
+.category-explore:hover {
+  color: #a91f27;
+  text-decoration: underline;
+}
+
+.category-recipes[open] .category-explore svg {
+  transform: rotate(90deg);
+}
+
+.category-explore svg {
+  transition: transform 0.2s ease;
+}
+
+.category-recipe-list {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid #eee;
+  list-style: none;
+}
+
+.category-recipe-list h3 {
+  margin: 0 0 4px;
+  color: #222;
+  font-size: 0.82rem;
+}
+
+.category-recipe-list p {
+  margin: 0;
+  color: #555;
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
+.categories-footer {
+  width: 100%;
+  padding: 22px 20px 24px;
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  background-color: #d3313b;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M0 30 Q 30 0 60 30 T 120 30' fill='none' stroke='rgba(255,255,255,0.10)' stroke-width='1.2'/%3E%3Cpath d='M0 50 Q 30 20 60 50 T 120 50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.2'/%3E%3C/svg%3E");
+  color: #fff;
+  text-align: center;
+}
+
+.categories-quote {
+  margin: 0 0 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.categories-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.categories-footer-links > a {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.categories-footer-links > a:hover {
+  text-decoration: underline;
+}
+
+.categories-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.categories-social > span {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.categories-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categories-social-icons a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.categories-social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.categories-social-icons img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .categories-main {
+    padding-top: 28px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .categories-main {
+    width: calc(100% - 20px);
+  }
+
+  .categories-main {
+    padding: 24px 0 40px;
+  }
+
+  .categories-intro {
+    margin-bottom: 22px;
+    padding: 0 8px;
+  }
+
+  .categories-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .category-card-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .categories-footer {
+    padding: 18px 12px;
+  }
+
+  .categories-quote {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .categories-footer-links {
+    padding: 0 4px;
+  }
+
+  .categories-footer-links > a {
+    font-size: 0.68rem;
+  }
+}
