@@ -1,9 +1,11 @@
-import ContactPage from './components/ContactPage'; // Notice the capital 'C' to match your file name
+// import ContactPage from './components/ContactPage';
+import AboutPage from './components/AboutPage';      // tanggalin yung // para magamit
 
 function App() {
   return (
     <div className="App">
-      <ContactPage />
+      {/* <ContactPage />  */}
+      <AboutPage /> 
     </div>
   );
 }

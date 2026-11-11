@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+  --primary-red: #db3339;
+  --bg-red: #eb4d55;
+  --text-dark: #333;
+  --light-pink: #ffb6b9;
+  --box-gray: #e6e6e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff; 
+}
+
+.about-page {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden; 
+  min-height: 100vh;
+}
+
+/* =========================================
+   --- HEADER (Original) ---
+   ========================================= */
+.header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 15px auto;
+  max-width: 1400px; 
+  width: calc(100% - 40px);
+  min-height: 60px;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 12px;
+  background:
+    radial-gradient(ellipse at 29% 42%, transparent 0 16px, rgba(255,255,255,.07) 17px 19px, transparent 20px 29px, rgba(255,255,255,.06) 30px 32px, transparent 33px),
+    radial-gradient(ellipse at 71% 75%, transparent 0 22px, rgba(255,255,255,.06) 23px 25px, transparent 26px 36px, rgba(255,255,255,.05) 37px 39px, transparent 40px),
+    linear-gradient(110deg, #e61c2f, #cb0015 58%, #de1025);
+}
+.logo { display: flex; align-items: center; gap: 10px; color: #fff; font-size: 1.2rem; font-weight: 600; white-space: nowrap; }
+.logo-img { width: 32px; height: 32px; border-radius: 4px; object-fit: cover; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: 30px; margin-left: auto; margin-right: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; white-space: nowrap; }
+.nav-links a.active { color: #222; background: #e5e5e5; padding: 6px 14px; border-radius: 20px; }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.search-bar { display: flex; align-items: center; justify-content: flex-end; padding: 0 12px; width: 180px; height: 32px; border-radius: 20px; background: #d1d1d1; cursor: pointer; }
+.search-icon { color: #555; }
+.user-icon { display: flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #d1d1d1; color: #555; cursor: pointer; }
+
+/* =========================================
+   --- HERO SECTION ---
+   ========================================= */
+.about-hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 5%;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto; 
+}
+
+.hero-bg-circle {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 550px;
+  height: 550px;
+  background-color: var(--light-pink);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-text-content {
+  flex: 1;
+  z-index: 1;
+}
+
+.about-badge {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* =========================================
+   --- PHILOSOPHY SECTION ---
+   ========================================= */
+.philosophy-section {
+  background-color: var(--bg-red);
+  padding: 80px 10%;
+  margin: 60px auto;
+  max-width: 1400px;
+  width: calc(100% - 40px); 
+  border-radius: 30px;
+}
+
+.philosophy-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.philosophy-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Binago ang paraan ng paggawa sa puting bilog para perfect center */
+.white-circle-bg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 0;
+  /* Centering trick */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.philosophy-img {
+  width: 100%;
+  max-width: 350px;
+  z-index: 1;
+  object-fit: cover;
+  /* Dinagdag para masiguradong walang extra spacing ang image mismo */
+  display: block; 
+  position: relative;
+}
+
+.philosophy-text {
+  flex: 1.2;
+  color: #fff;
+}
+
+.philosophy-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.philosophy-text p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.image-suggestion {
+  font-size: 0.8rem !important;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================================
+   --- MISSION & CTA SECTIONS ---
+   ========================================= */
+.mission-section, .cta-section {
+  position: relative;
+  padding: 40px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.mission-text-box {
+  background-color: var(--box-gray);
+  padding: 40px 60px 40px 100px;
+  border-radius: 0 50px 50px 0;
+  flex: 1;
+  margin-left: -60px;
+  z-index: 1;
+}
+
+.mission-text-box p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.mission-image-wrapper {
+  z-index: 2;
+}
+
+.cta-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-text-box {
+  background-color: var(--box-gray);
+  padding: 40px 100px 40px 60px;
+  border-radius: 50px 0 0 50px;
+  flex: 1;
+  text-align: right;
+  margin-right: -60px;
+  z-index: 1;
+}
+
+.cta-text-box p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.cta-image-wrapper {
+  z-index: 2;
+}
+
+.pink-circle-ring {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 8px solid var(--light-pink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pink-circle-ring img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.floating-circle {
+  position: absolute;
+  background-color: var(--light-pink);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left-circle {
+  width: 150px;
+  height: 150px;
+  left: 20px;
+  bottom: 0;
+}
+
+.right-circle {
+  width: 120px;
+  height: 120px;
+  right: 50px;
+  top: 50px;
+}
+
+/* =========================================
+   --- FOOTER ---
+   ========================================= */
+.footer { 
+  background-color: var(--primary-red);
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+  width: 100%; 
+}
+
+.footer-content { 
+  text-align: center; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M0 30 Q 30 0 60 30 T 120 30' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.5' /%3E%3Cpath d='M0 50 Q 30 20 60 50 T 120 50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.5' /%3E%3C/svg%3E");
+}
+
+.quote { 
+  font-weight: 700; 
+  font-size: 1.1rem; 
+  margin-bottom: 30px; 
+}
+
+.footer-links { 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.footer-link-text { 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+}
+
+.footer-social { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.footer-social span { 
+  font-weight: 600; 
+  font-size: 0.8rem; 
+}
+
+.footer-social-icons { 
+  display: flex; 
+  gap: 10px; 
+}
+
+.footer-social-icons img { 
+  width: 25px; 
+  height: 25px; 
+  border-radius: 5px; 
+}
+
+/* =========================================
+   --- RESPONSIVENESS ---
+   ========================================= */
+@media (max-width: 900px) {
+  .header { width: calc(100% - 20px); flex-direction: column; padding: 10px; gap: 10px; margin: 10px auto; }
+  .nav-links { margin: 0; flex-wrap: wrap; gap: 15px; }
+  .search-bar { width: 120px; }
+
+  .about-hero { flex-direction: column; padding: 40px 20px; text-align: center; }
+  .hero-bg-circle { width: 350px; height: 350px; top: 20%; left: 50%; transform: translateX(-50%); }
+  
+  .philosophy-section { width: calc(100% - 20px); margin: 40px auto; }
+  .philosophy-container { flex-direction: column; text-align: center; }
+  .white-circle-bg { width: 300px; height: 300px; left: 50%; transform: translateX(-50%); }
+  
+  .mission-container, .cta-container { flex-direction: column; gap: 20px; }
+  .mission-text-box, .cta-text-box { margin: 0; border-radius: 30px; padding: 30px; text-align: center; }
+  .floating-circle { display: none; }
+  
+  .footer-links { flex-direction: column; gap: 20px; }
+}
