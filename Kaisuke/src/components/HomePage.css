@@ -1,0 +1,525 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   HOME PAGE BASE
+========================================= */
+
+.home-page {
+  --home-red: #db3339;
+  --home-text: #333333;
+
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #ffffff;
+  color: var(--home-text);
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.home-page,
+.home-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 300px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.home-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 25px;
+
+  background: #e83d4a;
+  color: #ffffff;
+}
+
+.home-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.home-hero-text h1 {
+  margin: 0 0 15px;
+
+  font-family: Georgia, serif;
+  font-size: 2.3rem;
+  line-height: 1.05;
+  font-weight: 500;
+}
+
+.home-hero-text p {
+  margin: 0 0 20px;
+
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+.home-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 9px 17px;
+
+  border-radius: 25px;
+  background: #ff8b91;
+  color: #222222;
+
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.home-explore-btn:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.home-hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  line-height: 0;
+}
+
+.home-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  margin: 0;
+  padding: 0;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================
+   WHAT WE OFFER
+========================================= */
+
+.home-offer {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0 15px;
+
+  background: #ffffff;
+  text-align: center;
+}
+
+.home-section-title {
+  display: block;
+
+  width: 100%;
+  margin: 0;
+  padding: 2px 5px;
+
+  background: #e83d4a;
+  color: #ffffff;
+
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
+
+  text-align: center;
+}
+
+.home-offer p {
+  max-width: 1000px;
+
+  margin: 15px auto 0;
+  padding: 0 20px;
+
+  color: #333333;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* =========================================
+   POPULAR RECIPES
+========================================= */
+
+.home-recipes {
+  width: 100%;
+  margin: 0;
+  padding: 0 0 35px;
+
+  background: #ffffff;
+}
+
+.home-view-all {
+  margin: 10px 0 15px;
+  text-align: center;
+}
+
+.home-view-all a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 7px 16px;
+
+  border-radius: 25px;
+  background: #ff858c;
+  color: #222222;
+
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.home-view-all a:hover {
+  background: var(--home-red);
+  color: #ffffff;
+}
+
+/* FOOD GRID */
+
+.home-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px 16px;
+
+  width: 100%;
+  padding: 0 10px;
+}
+
+.home-recipe-card {
+  min-width: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.home-recipe-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.home-recipe-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.home-recipe-card:hover .home-recipe-image img {
+  transform: scale(1.05);
+}
+
+.home-recipe-details {
+  padding: 8px 3px;
+}
+
+.home-recipe-details h3 {
+  margin: 0;
+
+  color: #222222;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* =========================================
+   FOOTER - ORIGINAL JAPANESE WAVE DESIGN
+   NO CHEF IMAGE
+========================================= */
+
+.home-page .footer {
+  position: relative;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #d3313b;
+  color: #ffffff;
+
+  border-top: 5px solid #ffffff;
+  border-bottom: 5px solid #ffffff;
+}
+
+.home-page .footer-content {
+  position: relative;
+
+  width: 100%;
+  padding: 10px 20px;
+
+  background-color: #d3313b;
+
+  text-align: center;
+
+  border: none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cpath d='M0 30 Q 30 0 60 30 T 120 30' fill='none' stroke='rgba(255,255,255,0.10)' stroke-width='1.2'/%3E%3Cpath d='M0 50 Q 30 20 60 50 T 120 50' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1.2'/%3E%3C/svg%3E");
+}
+
+.home-page .quote {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home-page .footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.home-page .footer-link-text {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.home-page .footer-link-text:hover {
+  text-decoration: underline;
+}
+
+.home-page .footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.home-page .footer-social span {
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.home-page .footer-social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.home-page .footer-social-icons a {
+  display: flex;
+  transition: transform 0.2s ease;
+}
+
+.home-page .footer-social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.home-page .footer-social-icons img {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 900px) {
+
+  .home-hero {
+    height: 250px;
+  }
+
+  .home-hero-text {
+    padding: 20px;
+  }
+
+  .home-hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .home-offer p {
+    font-size: 0.78rem;
+  }
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+
+  /* HERO */
+
+  .home-hero {
+    grid-template-columns: 1fr 1fr;
+    height: 220px;
+  }
+
+  .home-hero-text {
+    padding: 15px 10px;
+  }
+
+  .home-label {
+    font-size: 0.65rem;
+  }
+
+  .home-hero-text h1 {
+    font-size: 1.35rem;
+    line-height: 1.05;
+  }
+
+  .home-hero-text p {
+    margin-bottom: 12px;
+    font-size: 0.55rem;
+  }
+
+  .home-explore-btn {
+    gap: 4px;
+    padding: 7px 10px;
+    font-size: 0.65rem;
+  }
+
+  .home-hero-image,
+  .home-hero-image img {
+    height: 220px;
+    min-height: 0;
+  }
+
+  /* WHAT WE OFFER */
+
+  .home-offer {
+    padding: 8px 0 12px;
+  }
+
+  .home-section-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .home-offer p {
+    padding: 0 12px;
+    font-size: 0.72rem;
+    line-height: 1.6;
+  }
+
+  /* POPULAR RECIPES */
+
+  .home-view-all {
+    margin: 8px 0 12px;
+  }
+
+  .home-recipe-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px 8px;
+    padding: 0 7px;
+  }
+
+  .home-recipe-image {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .home-recipe-details {
+    padding: 7px 2px;
+  }
+
+  .home-recipe-details h3 {
+    font-size: 0.65rem;
+  }
+
+  /* FOOTER */
+
+  .home-page .footer-content {
+    padding: 9px 10px;
+  }
+
+  .home-page .quote {
+    margin-bottom: 8px;
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .home-page .footer-links {
+    padding: 0 5px;
+  }
+
+  .home-page .footer-link-text {
+    font-size: 0.65rem;
+  }
+
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+  .home-hero-text h1 {
+    font-size: 1.2rem;
+  }
+
+  .home-recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+
 :root {
   --primary-red: #db3339;
   --text-dark: #333;
@@ -77,19 +78,22 @@ body {
 }
 
 .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.8rem;
   letter-spacing: 1px;
   white-space: nowrap;
+  border-radius: 20px;
 }
 
 .nav-links a.active {
   color: #222;
   background: #e5e5e5;
-  padding: 6px 14px;
-  border-radius: 20px;
 }
 
 .header-actions {
